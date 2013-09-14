@@ -1,0 +1,39 @@
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Hacklab@Tinkerfest</a>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a href="#" class="btn btn-primary btn-large">Learn more »</a></p>
+      </div>
+
+
+    {{>photos-bootstrap}}
+
+
+    </div>
+</body>
+
+<template name="photos-bootstrap">
+    <div class="row">
+        {{#each photo}}
+            <div class="span2">
+                <img src="{{src}}">
+            </div>
+        {{/each}}
+    </div>
+</template>
